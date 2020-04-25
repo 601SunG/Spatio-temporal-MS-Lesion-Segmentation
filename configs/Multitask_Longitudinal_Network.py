@@ -8,6 +8,7 @@ CONFIG = {
         "type": "MultitaskNetwork",
         "args": {
             "in_channels": 8,
+            "resolution": (217, 217)
         }
     },
     "dataset": {
@@ -15,7 +16,8 @@ CONFIG = {
         "args": {
             "data_dir": "../ISBIMSlesionChallenge/",
             "preprocess": True,
-            "modalities": ['flair', 'mprage', 'pd', 't2']
+            "modalities": ['flair', 'mprage', 'pd', 't2'],
+            "val_patients": [4]
         }
     },
     "data_loader": {

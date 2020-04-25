@@ -15,7 +15,8 @@ CONFIG = {
         "args": {
             "data_dir": "../ISBIMSlesionChallenge/",
             "preprocess": True,
-            "modalities": ['flair', 'mprage', 'pd', 't2']
+            "modalities": ['flair', 'mprage', 'pd', 't2'],
+            "val_patients": [4]
         }
     },
     "data_loader": {

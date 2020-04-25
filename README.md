@@ -31,7 +31,7 @@ If you use any of our code, please cite:
 ## Requirements
 * Python >= 3.5 (3.6 recommended)
 * PyTorch = 1.4 
-* tqdm (Optional for `test.py`)
+* tqdm
 * tensorboard >= 1.14 
 * nibabel >= 2.5
 

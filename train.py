@@ -45,11 +45,11 @@ def main(config, resume=None):
         train(logger, config, loss, metrics)
 
 
-def train(logger, config, loss, metrics, val_patient=4, view: Views = None):
-    dataset = config.retrieve_class('dataset', module_dataset)(**config['dataset']['args'], phase=Phase.TRAIN, val_patient=val_patient, view=view)
+def train(logger, config, loss, metrics, view: Views = None):
+    dataset = config.retrieve_class('dataset', module_dataset)(**config['dataset']['args'], phase=Phase.TRAIN, view=view)
     data_loader = config.retrieve_class('data_loader', module_data_loader)(**config['data_loader']['args'], dataset=dataset)
 
-    val_dataset = config.retrieve_class('dataset', module_dataset)(**config['dataset']['args'], phase=Phase.VAL, val_patient=val_patient, view=view)
+    val_dataset = config.retrieve_class('dataset', module_dataset)(**config['dataset']['args'], phase=Phase.VAL, view=view)
     valid_data_loader = config.retrieve_class('data_loader', module_data_loader)(**config['data_loader']['args'], dataset=val_dataset)
 
     # build model architecture, then print to console
